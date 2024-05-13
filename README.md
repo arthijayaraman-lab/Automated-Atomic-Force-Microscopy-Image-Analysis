@@ -8,7 +8,7 @@ An unsupervised machine learning based workflow that automates identification an
 
 ## Demo
 
-[Insert gif or link to demo](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/overview_flow.gif)
+![](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/overview_flow.gif)
 
 
 ## Documentation
