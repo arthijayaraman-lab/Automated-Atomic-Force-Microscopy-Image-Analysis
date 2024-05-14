@@ -39,6 +39,8 @@ Polymer Blends"](https://linktopaper)
 
 ![Data_preview](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/dataset_preview.png)
 
+**Dataset avilable at [zenodo](https://zenodo.org/records/11179874?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM0MWViYzY4LTI1NzMtNGYxMC1iZjdjLTUwYWQ4Zjk0NGU0OSIsImRhdGEiOnt9LCJyYW5kb20iOiJjMDcwMTc3Y2IxNzM3ZGMxZWU1MWU2MjJjMjA0N2ZjMCJ9.Y3_qzNSNsap_oqLRnEi-wHmwooy65TT6F7tjFTF5qE0X8evYr0VTZmGKh34TI6UmsAd9cJrfnlbm6rQUK82h7A)**
+
 #### Deatils
 - Total **144** images 
 - **16** unique block copolymer blends of varing chain length and chain ratio
