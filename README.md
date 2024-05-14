@@ -11,6 +11,15 @@ An unsupervised machine learning based workflow that automates identification an
 ![](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/Demo.gif)
 
 ![](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/overview_flow.gif)
+ 
+## Features
+
+- Unsupervised solution - does not require model training 
+- No training lables required 
+- Genralizable to different polymer blends 
+ 
+
+
 ## Documentation
 
  The project is an implemnetation of the paper \
@@ -74,3 +83,9 @@ python3 main.py
 
 - [@octokatherine](https://www.github.com/octokatherine)
 
+
+## Citation
+Cite us,
+```bibtex
+    citation 
+```
