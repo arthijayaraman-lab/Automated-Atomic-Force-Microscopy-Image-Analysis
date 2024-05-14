@@ -37,7 +37,15 @@ Polymer Blends"](https://linktopaper)
 
 ## Dataset
 
-![Data_preview](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/workflow.png)
+![Data_preview](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/dataset_preview.png)
+
+#### Deatils
+- Total **144** images 
+- **16** unique block copolymer blends of varing chain length and chain ratio
+- **9** measurements of each blend 
+- raw **`.ibw`** files 
+- **384** x **384** pixels image size  
+
 ## How to use
 
 There are two ways to run the code. 
