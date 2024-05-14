@@ -10,7 +10,7 @@ from skimage.transform import radon
 from sklearn.decomposition import PCA
 from scipy.fftpack import dct
 import time
-from utils.utils import processing_normalization, get_transform_list
+from utils.utils import processing_normalization, get_transform_list, get_stats_feature_vector
 
 class Segment:
   def __init__(self, pca_comp = 3, pca_apply=False, win_ratio = 0.03, transform_string = "dft", stand_out_features = True, eql_hist = False, stats_to_use = "va"):
@@ -167,7 +167,7 @@ class Segment:
         self.get_stats_feature_vector(dct_image) (ndarray) : feature vectore 
     """
     dct_image = dct(dct(tile.T, norm='ortho').T, norm='ortho')
-    return self.get_stats_feature_vector(dct_image)
+    return get_stats_feature_vector(dct_image, self.stats_to_use)
 
   ###### Discrete Fourirer transforms ########
 
@@ -181,7 +181,7 @@ class Segment:
     """
     dft_image = np.fft.fft2(tile)
     dft_image = np.fft.fftshift(dft_image)
-    return self.get_stats_feature_vector(dft_image)
+    return get_stats_feature_vector(dft_image, self.stats_to_use)
 
 
   ########## Wavelet transforms ##############
@@ -200,7 +200,7 @@ class Segment:
     texture_features = []
     for detail_coeff_ind in range(len(cD)):
         for i in range(3):
-            texture_features.append(self.get_stats_feature_vector(cD[detail_coeff_ind][1][i]))
+            texture_features.append(get_stats_feature_vector(cD[detail_coeff_ind][1][i]), self.stats_to_use)
     return texture_features
 
   def get_haar_features(self, tile, level = 4):
@@ -218,7 +218,7 @@ class Segment:
     texture_features = []
 
     for detail_coeff in cD:
-        texture_features.append(self.get_stats_feature_vector(detail_coeff))
+        texture_features.append(get_stats_feature_vector(detail_coeff), self.stats_to_use)
 
     return texture_features
 
@@ -233,7 +233,7 @@ class Segment:
     """
     theta = np.linspace(0., 180., max(tile.shape), endpoint=False)
     sinogram = radon(tile, theta=theta, circle=False)
-    texture_features = self.get_stats_feature_vector(sinogram)
+    texture_features = get_stats_feature_vector(sinogram, self.stats_to_use)
     return texture_features
 
 
