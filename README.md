@@ -6,11 +6,11 @@ An unsupervised machine learning based workflow that automates identification an
 
 
 
-## Demo
+## Overview
+
+![](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/Demo.gif)
 
 ![](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/overview_flow.gif)
-
-
 ## Documentation
 
  The project is an implemnetation of the paper \
