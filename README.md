@@ -23,7 +23,7 @@ Polymer Blends"](https://linktopaper)
 
 ## Workflow
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![workflow](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/workflow.png)
 
 
 ## How to use
@@ -32,10 +32,18 @@ There are two ways to run the code.
 - Jupyter Notebook (**Recomended - Simple**)
 
 - Python3 terminal
-### Python3 terminal  
+
+### Jupyter Notebook  
+- Download [python notebook](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/notebooks/auto_afm.ipynb)
+ - (**Prefered**) upload to https://colab.research.google.com/  
+        OR 
+- Upload locally into jupyter notebook 
+
+### Python3 Terminal  
 #### Installation
 
-Download code from repo 
+Download code from repo
+
 
 ```bash 
   git clone https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis.git
@@ -53,4 +61,16 @@ Run main script main.py
 python3 main.py 
 
 ```
+
+
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
+
+## Authors
+
+- [@octokatherine](https://www.github.com/octokatherine)
 
