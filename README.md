@@ -35,6 +35,9 @@ Polymer Blends"](https://linktopaper)
 ![workflow](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/workflow.png)
 
 
+## Dataset
+
+![Data_preview](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/workflow.png)
 ## How to use
 
 There are two ways to run the code. 
@@ -72,16 +75,17 @@ python3 main.py
 ```
 
 
+## Other Use Cases
+first show our case code to run 
+
+second show liturature data how it runs with dwt 
+
+third show feature extraction from lit data on fiberals 
 ## Acknowledgements
 
  - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
  - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
-
-## Authors
-
-- [@octokatherine](https://www.github.com/octokatherine)
 
 
 ## Citation

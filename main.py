@@ -9,8 +9,8 @@ import argparse
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-T', '--transform_string', type=str , default="dft", help='')
-    parser.add_argument('-S', '--stats', type=str , default="v", help='')
+    parser.add_argument('-T', '--transform_string', type=str , default="dft", help='transform list passed as a string ')
+    parser.add_argument('-S', '--stats', type=str , default="v", help='List of statistics used in dimensional reduction and feature extraction. a = mean; m = max; s = skew; k = kurtosis; v = variance (e.g. mean+variance => python3 main.py -S "av")')
     parser.add_argument('-wf', '--win_fac', type=float , default=0.03, help='')
     parser.add_argument('-pcs', '--pca', type=bool , default=False, help='')
     parser.add_argument('-npcs', '--pca_n_comp', type=int , default=3, help='')
