@@ -17,7 +17,7 @@ An unsupervised machine learning based workflow that automates identification an
 
 - Unsupervised solution - does not require model training 
 - No training lables required 
-- Genralizable to different polymer films 
+- Genralizable to other polymer films 
  
 
 
@@ -43,8 +43,8 @@ Polymer Blends"](https://linktopaper)
 **Dataset avilable at [zenodo](https://zenodo.org/records/11179874?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM0MWViYzY4LTI1NzMtNGYxMC1iZjdjLTUwYWQ4Zjk0NGU0OSIsImRhdGEiOnt9LCJyYW5kb20iOiJjMDcwMTc3Y2IxNzM3ZGMxZWU1MWU2MjJjMjA0N2ZjMCJ9.Y3_qzNSNsap_oqLRnEi-wHmwooy65TT6F7tjFTF5qE0X8evYr0VTZmGKh34TI6UmsAd9cJrfnlbm6rQUK82h7A)**
 
 #### Deatils
-- Total **144** images of **16** block copolymer films
-- **9** images of each film 
+- Total **144** images of **16** polymer samples
+- **9** images of each sample 
 - raw **`.ibw`** files 
 - **384** x **384** pixels image size  
 
@@ -112,17 +112,15 @@ options:
 
 
 ```
+#### Example 
+```
+python3 main.py -T "dft" -S "v" -wf 0.03 -pix_to_nm 5.21 -i /path/to/input/dir/ -C "k_mean" -NC 2 -O /path/to/output/dir/
+```
+**Note**:- currently only supports **`.png`** files as input. 
 
-
-## Other Use Cases
-first show our case code to run 
-
-second show liturature data how it runs with dwt 
-
-third show feature extraction from lit data on fiberals 
 ## Acknowledgements
 
- - Todo
+ - Todo same as paper
 
 
 ## Citation

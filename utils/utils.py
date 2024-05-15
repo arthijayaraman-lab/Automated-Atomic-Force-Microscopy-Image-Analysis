@@ -3,7 +3,7 @@ from sklearn.preprocessing import StandardScaler
 import porespy as ps
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
-
+    
 def processing_normalization(feature_cube_flt):
     """
     Discription: function to normalize feature cube
@@ -46,7 +46,6 @@ def get_diameter_distribution(img, um_pix):
     ax[1].plot(psd.bin_centers[:-1], -1*np.diff(psd.cdf), color="black")  # the results from the psd.pdf is very flaky. it gives different scales for different bin sizes and values check this out when free
     ax[1].tick_params('x', top=True)
     ax[1].tick_params('y', right=True)
-    ax[1].set_ylim([0, 0.3])
     ax[1].yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
     return fig
 

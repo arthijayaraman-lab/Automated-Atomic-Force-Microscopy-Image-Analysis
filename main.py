@@ -19,30 +19,41 @@ if __name__ == "__main__":
     parser.add_argument('-i', metavar='Input_dir', type=str , default="./input/", help='Folder contain input images to process')
     parser.add_argument('-C', metavar='Clustering_algo', type=str , choices=["gmm", "k_mean"], default="k_mean", help='Choose which clustering algorithum to use')
     parser.add_argument('-NC', type=int , default=2, help='Number of clusters the clustering algorithm needs to generate')
-    parser.add_argument('-W', type=str , choices=["B", "B_DD"], default="k_means", help='writing options: decides all the file that are to be output')
     parser.add_argument('-O', type=str , default="./output/", help='Output destination path')
     args = parser.parse_args()
     
-    segment = Segment(pca_comp = args.pca_n_comp,
-                    pca_apply=args.pca,
-                    win_ratio = args.win_fac,
-                    transform_string = args.transform_string, #"dl_resnet50",
-                    stand_out_features = True,
-                    eql_hist = args.hist_eql,
-                    stats_to_use = args.stats)
-
-    inp_img = np.random.randint(low=0, high=2054, size=(60,60), dtype=int)
-    feature_cube_flat, w, h = segment.slinding_window(inp_img)
-    feature_cube_flat = np.array(feature_cube_flat)
     
-    feature_cube_flat_norm = processing_normalization(feature_cube_flat)
-    
-    if args.clust_algo == "k_mean":
-        index_map = fit_kmeans(feature_cube_flat_norm,w,h,args.n_clst)
-    elif args.clust_algo == "gmm":
-        index_map = fit_gmm(feature_cube_flat_norm,w,h,args.n_clst)
+    for file_name in os.listdir(args.i):
+        print(file_name)
+        inp_img = cv2.imread(os.path.join(args.i, file_name))
+        segment = Segment(pca_comp = args.npcs,
+                        pca_apply=args.pca,
+                        win_ratio = args.wf,
+                        transform_string = args.T, #"dl_resnet50",
+                        stand_out_features = True,
+                        eql_hist = args.hist_eql,
+                        stats_to_use = args.S)
+        feature_cube_flat, w, h = segment.slinding_window(inp_img)
+        feature_cube_flat = np.array(feature_cube_flat)
         
-    index_map = index_map*255
-    
-    fig = get_diameter_distribution(index_map, args.pix_to_nm)
-    print(index_map)
+        feature_cube_flat_norm = processing_normalization(feature_cube_flat)
+        
+        if args.C == "k_mean":
+            index_map = fit_kmeans(feature_cube_flat_norm,w,h,args.NC)
+        elif args.C == "gmm":
+            index_map = fit_gmm(feature_cube_flat_norm,w,h,args.NC)
+        
+        index_map = index_map.astype(bool)
+        index_map_inv = np.invert(index_map)*255
+        index_map = index_map*255                   # index map predicts index convert to binary 
+        
+        fig = get_diameter_distribution(index_map, args.pix_to_nm)
+        fig_inv = get_diameter_distribution(index_map_inv, args.pix_to_nm)
+        
+        # save all output to image files 
+        cv2.imwrite(os.path.join(args.O,file_name.replace(".png","_raw.png")), inp_img)
+        cv2.imwrite(os.path.join(args.O,file_name.replace(".png","_seg_inv.png")), index_map)
+        cv2.imwrite(os.path.join(args.O,str(file_name.split(".png")[0]+"_seg.png")), index_map_inv)
+        fig.savefig(os.path.join(args.O,str(file_name.split(".png")[0]+"_distribution.png")))
+        fig_inv.savefig(os.path.join(args.O,str(file_name.split(".png")[0]+"_distribution_inv.png")))
+            
