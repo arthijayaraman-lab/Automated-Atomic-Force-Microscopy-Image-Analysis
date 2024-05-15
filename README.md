@@ -1,7 +1,8 @@
 
 # Automated Atomic Force Microscopy Image Analysis
 
-An unsupervised machine learning based workflow that automates identification and quantification of features (domain sizes exmaple showns in repo) in AFM images of polymer films.
+An unsupervised machine learning based workflow that automates identification and quantification of features (domain sizes example shows in repo) in AFM images of polymer films.
+
 
 
 
@@ -16,19 +17,21 @@ An unsupervised machine learning based workflow that automates identification an
 ## Features
 
 - Unsupervised solution - does not require model training 
-- No training lables required 
-- Genralizable to other polymer films 
+- No training labels required 
+- Generalizable to other polymer films 
  
+
 
 
 ## Documentation
 
- The project is an implemnetation of the paper \
+ The project is an implementation of the paper \
  ["Machine Learning for Analyzing Atomic Force Microscopy
 (AFM)
 Images
 Generated from
 Polymer Blends"](https://linktopaper)
+
 
 
 ## Workflow
@@ -42,16 +45,19 @@ Polymer Blends"](https://linktopaper)
 
 **Dataset avilable at [zenodo](https://zenodo.org/records/11179874?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM0MWViYzY4LTI1NzMtNGYxMC1iZjdjLTUwYWQ4Zjk0NGU0OSIsImRhdGEiOnt9LCJyYW5kb20iOiJjMDcwMTc3Y2IxNzM3ZGMxZWU1MWU2MjJjMjA0N2ZjMCJ9.Y3_qzNSNsap_oqLRnEi-wHmwooy65TT6F7tjFTF5qE0X8evYr0VTZmGKh34TI6UmsAd9cJrfnlbm6rQUK82h7A)**
 
-#### Deatils
+#### Details
 - Total **144** images of **16** polymer samples
 - **9** images of each sample 
 - raw **`.ibw`** files 
 - **384** x **384** pixels image size  
 
+
+
+
 ## How to use
 
 There are two ways to run the code. 
-- Jupyter Notebook (**Recomended - Simple**)
+- Jupyter Notebook (**Recommended - Simple**)
 
 - Python3 terminal
 
@@ -72,7 +78,7 @@ git clone https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscop
 cd Automated-Atomic-Force-Microscopy-Image-Analysis
 ```
 
-Install conda enveronment
+Install conda environment
 
 ```bash
 conda env create -f environment.yml
@@ -105,7 +111,7 @@ options:
   -pix_to_nm pixel_to_nanometer
                         Scale to convert one pixel into real distance units (nm/pix in our case)
   -i Input_dir          Folder contain input images to process
-  -C Clustering_algo    Choose which clustering algorithum to use
+  -C Clustering_algo    Choose which clustering algorithm to use
   -NC NC                Number of clusters the clustering algorithm needs to generate
   -W {B,B_DD}           writing options: decides all the file that are to be output
   -O O                  Output destination path
@@ -117,6 +123,9 @@ options:
 python3 main.py -T "dft" -S "v" -wf 0.03 -pix_to_nm 5.21 -i /path/to/input/dir/ -C "k_mean" -NC 2 -O /path/to/output/dir/
 ```
 **Note**:- currently only supports **`.png`** files as input. 
+
+
+
 
 ## Acknowledgements
 
