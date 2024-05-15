@@ -1,22 +1,23 @@
 
 # Automated Atomic Force Microscopy Image Analysis
 
-An unsupervised machine learning based workflow that automates identification and quantification of features (domain sizes exmaple showns in repo) in AFM images of polymer blends.
+An unsupervised machine learning based workflow that automates identification and quantification of features (domain sizes exmaple showns in repo) in AFM images of polymer films.
 
 
 
 
 ## Overview
 
-![](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/Demo.gif)
-
 ![](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/overview_flow.gif)
  
+![](https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis/blob/main/img/Demo.gif)
+
+
 ## Features
 
 - Unsupervised solution - does not require model training 
 - No training lables required 
-- Genralizable to different polymer blends 
+- Genralizable to different polymer films 
  
 
 
@@ -42,9 +43,8 @@ Polymer Blends"](https://linktopaper)
 **Dataset avilable at [zenodo](https://zenodo.org/records/11179874?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM0MWViYzY4LTI1NzMtNGYxMC1iZjdjLTUwYWQ4Zjk0NGU0OSIsImRhdGEiOnt9LCJyYW5kb20iOiJjMDcwMTc3Y2IxNzM3ZGMxZWU1MWU2MjJjMjA0N2ZjMCJ9.Y3_qzNSNsap_oqLRnEi-wHmwooy65TT6F7tjFTF5qE0X8evYr0VTZmGKh34TI6UmsAd9cJrfnlbm6rQUK82h7A)**
 
 #### Deatils
-- Total **144** images 
-- **16** unique block copolymer blends of varing chain length and chain ratio
-- **9** measurements of each blend 
+- Total **144** images of **16** block copolymer films
+- **9** images of each film 
 - raw **`.ibw`** files 
 - **384** x **384** pixels image size  
 
@@ -64,12 +64,12 @@ There are two ways to run the code.
 ### Python3 Terminal  
 #### Installation
 
-Download code from repo
+Download code from Github
 
 
 ```bash 
-  git clone https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis.git
-  cd Automated-Atomic-Force-Microscopy-Image-Analysis
+git clone https://github.com/arthijayaraman-lab/Automated-Atomic-Force-Microscopy-Image-Analysis.git
+cd Automated-Atomic-Force-Microscopy-Image-Analysis
 ```
 
 Install conda enveronment
@@ -83,6 +83,35 @@ Run main script main.py
 python3 main.py 
 
 ```
+Help options `main.py`   
+```bash
+python3 main.py -h
+```
+Arguments to `main.py`
+```bash
+usage: main.py [-h] [-T Transforms] [-S Statistics] [-wf Win_factor] [-pca] [-npcs no_of_pca] [-hist_eql] [-pix_to_nm pixel_to_nanometer] [-i Input_dir] [-C Clustering_algo] [-NC NC]
+               [-W {B,B_DD}] [-O O]
+
+options:
+
+  -h, --help            show this help message and exit
+  -T Transforms         transform list passed as a string
+  -S Statistics         List of statistics used in dimensional reduction and feature extraction. a = mean; m = max; s = skew; k = kurtosis; v = variance (e.g. mean+variance => python3 main.py -S
+                        "av")
+  -wf Win_factor        Win_factor controls tile size is the ratio of tile size to input image
+  -pca                  Flag to use PCA
+  -npcs no_of_pca       Number of components to extract in PCA
+  -hist_eql             Flag to perform histogram equalization on pre-processed image
+  -pix_to_nm pixel_to_nanometer
+                        Scale to convert one pixel into real distance units (nm/pix in our case)
+  -i Input_dir          Folder contain input images to process
+  -C Clustering_algo    Choose which clustering algorithum to use
+  -NC NC                Number of clusters the clustering algorithm needs to generate
+  -W {B,B_DD}           writing options: decides all the file that are to be output
+  -O O                  Output destination path
+
+
+```
 
 
 ## Other Use Cases
@@ -93,9 +122,7 @@ second show liturature data how it runs with dwt
 third show feature extraction from lit data on fiberals 
 ## Acknowledgements
 
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ - Todo
 
 
 ## Citation
