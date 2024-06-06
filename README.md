@@ -135,5 +135,5 @@ python3 main.py -T "dft" -S "v" -wf 0.03 -pix_to_nm 5.21 -i /path/to/input/dir/ 
 ## Citation
 Cite us,
 ```bibtex
-    citation 
+ 
 ```
