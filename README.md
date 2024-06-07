@@ -128,8 +128,7 @@ python3 main.py -T "dft" -S "v" -wf 0.03 -pix_to_nm 5.21 -i /path/to/input/dir/ 
 
 
 ## Acknowledgements
-
- - Todo same as paper
+A.J. and A.P. are grateful for financial support from Multi University Research Initiative (MURI) from the Army Research Office, Award Number W911NF2310260.. Y. W. and X. G. are grateful for financial support from the Department of Energy under the award number of DE-SC0024432. A portion of this work was done at the Molecular Foundry, which is supported by the Office of Science, Office of Basic Energy Sciences, of the U.S. Department of Energy under Contract No. DE-AC02-05CH11231.
 
 
 ## Citation
