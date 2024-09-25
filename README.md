@@ -134,5 +134,10 @@ A.J. and A.P. are grateful for financial support from Multi University Research 
 ## Citation
 Cite us,
 ```bibtex
- 
+ @article{paruchuri2024machine,
+  title={Machine Learning for Analyzing Atomic Force Microscopy (AFM) Images Generated from Polymer Blends},
+  author={Paruchuri, Aanish and Wang, Yunfei and Gu, Xiaodan and Jayaraman, Arthi},
+  journal={arXiv preprint arXiv:2409.11438},
+  year={2024}
+}
 ```
