@@ -30,7 +30,7 @@ An unsupervised machine learning based workflow that automates identification an
 (AFM)
 Images
 Generated from
-Polymer Blends"]([https://linktopaper](https://arxiv.org/abs/2409.11438))
+Polymer Blends"]([https://arxiv.org/abs/2409.11438])
 
 
 
